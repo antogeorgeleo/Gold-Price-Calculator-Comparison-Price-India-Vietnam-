@@ -1,18 +1,21 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-LEO — One-Click Local Desktop Launcher
-Created by Anto George Leo
+LEO launcher  ·  Created by Anto George Leo
+------------------------------------------
+Starts the LEO desktop application (Tkinter window).
 
-Run this file on your PC (`python run_leo.py`) to launch the LEO server
-and automatically open the luxury application window in your browser.
+    python3 run_leo.py
+
+(The Flask web version is optional and lives in app.py — it is NOT needed
+to use LEO.)
 """
-
 import os
-import subprocess
 import sys
-from pathlib import Path
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from leo_desktop import main          # noqa: E402
 
 if __name__ == "__main__":
-    env = os.environ.copy()
-    env["LEO_OPEN_BROWSER"] = "1"
-    app_path = Path(__file__).resolve().parent / "app.py"
-    subprocess.run([sys.executable, str(app_path)], env=env, check=True)
+    main()

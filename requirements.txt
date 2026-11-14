@@ -1,5 +1,9 @@
-flask>=3.0.0
-reportlab>=4.0.0
-openpyxl>=3.1.0
-requests>=2.31.0
-numpy>=1.26.0
+# LEO — Vietnam / India Gold Rate Comparison
+# Created by Anto George Leo
+#
+# The desktop app (leo_desktop.py) runs on the Python standard library alone.
+# The packages below unlock the optional features:
+
+reportlab>=4.0     # PDF report + Print
+openpyxl>=3.1      # Excel workbook
+requests>=2.31     # optional: Telegram bot delivery
